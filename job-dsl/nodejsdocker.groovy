@@ -9,13 +9,12 @@ job('NodeJS example') {
         scm('H/5 * * * *')
     }
     wrappers {
-        nodejs('nodejs') // this is the name of the NodeJS installation in 
+        nodejs('nodejs') // this is the name of the NodeJS installation in
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
     steps {
         shell("npm install")
     }
-}
     steps {
         dockerBuildAndPublish {
             repositoryName('jmakanjuola/docker-nodejs-demo')
