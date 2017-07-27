@@ -19,7 +19,7 @@ job('NodeJS example') {
         dockerBuildAndPublish {
             repositoryName('jmakanjuola/docker-nodejs-demo')
             tag('${GIT_REVISION,length=9}')
-            registryCredentials('ECR')
+            registryCredentials('dockerhub')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)
